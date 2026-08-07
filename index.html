@@ -26,7 +26,8 @@
       "https://blog.simukappu.com",
       "https://github.com/simukappu/blog.simukappu.com",
       "https://github.com/simukappu",
-      "https://www.linkedin.com/in/shota-yamazaki"
+      "https://www.linkedin.com/in/shota-yamazaki",
+      "https://speakerdeck.com/simukappu"
     ]
   }
   </script>
@@ -44,7 +45,6 @@
       color: #e6edf3;
       min-height: 100vh;
       display: flex;
-      align-items: center;
       justify-content: center;
     }
 
@@ -52,6 +52,7 @@
       text-align: center;
       padding: 2rem;
       max-width: 420px;
+      margin: auto;
     }
 
     .avatar {
@@ -71,13 +72,16 @@
       font-size: 0.95rem;
       color: #8b949e;
       line-height: 1.6;
-      margin-bottom: 2rem;
+      max-width: 540px;
+      margin: 0 auto 2rem;
     }
 
     .links {
       display: flex;
       flex-direction: column;
       gap: 0.75rem;
+      max-width: calc(420px - 4rem);
+      margin: 0 auto;
     }
 
     .link-primary {
@@ -136,6 +140,72 @@
     .link-primary:hover svg {
       fill: #e6edf3;
     }
+
+    .writing {
+      text-align: left;
+      margin-top: 2.25rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid #21262d;
+    }
+
+    .writing h2 {
+      font-size: 0.8125rem;
+      font-weight: 500;
+      color: #8b949e;
+      margin-bottom: 1rem;
+    }
+
+    .writing ul {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 0.9rem;
+    }
+
+    .writing a {
+      display: block;
+      position: relative;
+      padding-left: 0.85rem;
+      color: #e6edf3;
+      text-decoration: none;
+      font-size: 0.9375rem;
+      font-weight: 500;
+      line-height: 1.45;
+      letter-spacing: -0.01em;
+      transition: color 0.2s;
+    }
+
+    .writing a::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0.25em;
+      bottom: 0.25em;
+      width: 2px;
+      border-radius: 1px;
+      background: #30363d;
+      transition: background 0.2s;
+    }
+
+    .writing a:hover {
+      color: #58a6ff;
+    }
+
+    .writing a:hover::before {
+      background: #58a6ff;
+    }
+
+    a:focus-visible {
+      outline: 2px solid #58a6ff;
+      outline-offset: 3px;
+      border-radius: 4px;
+    }
+
+    @media (min-width: 600px) {
+      .container {
+        max-width: min(760px, 100vw - 5rem);
+      }
+    }
   </style>
 </head>
 <body>
@@ -166,6 +236,32 @@
         </a>
       </div>
     </div>
+    <nav class="writing" aria-labelledby="writing-heading">
+      <h2 id="writing-heading">Selected writing</h2>
+      <ul>
+        <li>
+          <a href="https://blog.simukappu.com/4-lessons-from-dissecting-production-systems-at-scale-architecture-dojo-2025">4 Lessons from Dissecting Production Systems at Scale — Architecture Dojo 2025</a>
+        </li>
+        <li>
+          <a href="https://blog.simukappu.com/when-the-poc-passed-but-production-didn-t-defining-good-enough-at-national-scale">When the PoC Passed but Production Didn't — Defining "Good Enough" at National Scale</a>
+        </li>
+        <li>
+          <a href="https://blog.simukappu.com/three-responses-to-ai-s-probabilistic-core-architecture-dojo-2026">Three Responses to AI's Probabilistic Core — Architecture Dojo 2026</a>
+        </li>
+        <li>
+          <a href="https://blog.simukappu.com/scaling-peak-traffic-from-planned-offloads-to-unpredictable-bursts">Scaling Peak Traffic: From Planned Offloads to Unpredictable Bursts</a>
+        </li>
+        <li>
+          <a href="https://blog.simukappu.com/resilience-beyond-multi-az-bulkheads-and-shock-absorbers-architecture-dojo-2024">Resilience Beyond Multi-AZ: Bulkheads and Shock Absorbers — Architecture Dojo 2024</a>
+        </li>
+        <li>
+          <a href="https://blog.simukappu.com/ai-agent-evaluation-what-how-when">AI Agent Evaluation: What, How, When</a>
+        </li>
+        <li>
+          <a href="https://blog.simukappu.com/three-pivots-in-ai-driven-development">Three Pivots in AI-Driven Development</a>
+        </li>
+      </ul>
+    </nav>
   </div>
 </body>
 </html>
