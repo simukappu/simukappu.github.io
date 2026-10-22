@@ -159,7 +159,7 @@
       list-style: none;
       display: flex;
       flex-direction: column;
-      gap: 0.9rem;
+      gap: 1.1rem;
     }
 
     .writing a {
@@ -193,6 +193,15 @@
 
     .writing a:hover::before {
       background: #58a6ff;
+    }
+
+    .writing a .desc {
+      display: block;
+      margin-top: 0.15rem;
+      color: #8b949e;
+      font-size: 0.8125rem;
+      font-weight: 400;
+      letter-spacing: 0;
     }
 
     a:focus-visible {
@@ -240,25 +249,25 @@
       <h2 id="writing-heading">Selected writing</h2>
       <ul>
         <li>
-          <a href="https://blog.simukappu.com/4-lessons-from-dissecting-production-systems-at-scale-architecture-dojo-2025">4 Lessons from Dissecting Production Systems at Scale — Architecture Dojo 2025</a>
+          <a href="https://blog.simukappu.com/4-lessons-from-dissecting-production-systems-at-scale-architecture-dojo-2025">4 Lessons from Dissecting Production Systems at Scale — Architecture Dojo 2025 <span class="desc">Constraints, evolvability, and reconciliation in real systems</span></a>
         </li>
         <li>
-          <a href="https://blog.simukappu.com/when-the-poc-passed-but-production-didn-t-defining-good-enough-at-national-scale">When the PoC Passed but Production Didn't — Defining "Good Enough" at National Scale</a>
+          <a href="https://blog.simukappu.com/when-the-poc-passed-but-production-didn-t-defining-good-enough-at-national-scale">When the PoC Passed but Production Didn't — Defining "Good Enough" at National Scale <span class="desc">A PoC that passed, and the production load that did not</span></a>
         </li>
         <li>
-          <a href="https://blog.simukappu.com/three-responses-to-ai-s-probabilistic-core-architecture-dojo-2026">Three Responses to AI's Probabilistic Core — Architecture Dojo 2026</a>
+          <a href="https://blog.simukappu.com/three-responses-to-ai-s-probabilistic-core-architecture-dojo-2026">Three Responses to AI's Probabilistic Core — Architecture Dojo 2026 <span class="desc">Control, trust, and adaptation around an AI at the core</span></a>
         </li>
         <li>
-          <a href="https://blog.simukappu.com/scaling-peak-traffic-from-planned-offloads-to-unpredictable-bursts">Scaling Peak Traffic: From Planned Offloads to Unpredictable Bursts</a>
+          <a href="https://blog.simukappu.com/scaling-peak-traffic-from-planned-offloads-to-unpredictable-bursts">Scaling Peak Traffic: From Planned Offloads to Unpredictable Bursts <span class="desc">The 0-to-N arrival pattern that load tests miss</span></a>
         </li>
         <li>
-          <a href="https://blog.simukappu.com/resilience-beyond-multi-az-bulkheads-and-shock-absorbers-architecture-dojo-2024">Resilience Beyond Multi-AZ: Bulkheads and Shock Absorbers — Architecture Dojo 2024</a>
+          <a href="https://blog.simukappu.com/resilience-beyond-multi-az-bulkheads-and-shock-absorbers-architecture-dojo-2024">Resilience Beyond Multi-AZ: Bulkheads and Shock Absorbers — Architecture Dojo 2024 <span class="desc">Two production incidents, bulkheads, and shock absorbers</span></a>
         </li>
         <li>
-          <a href="https://blog.simukappu.com/ai-agent-evaluation-what-how-when">AI Agent Evaluation: What, How, When</a>
+          <a href="https://blog.simukappu.com/the-unit-economics-of-an-ai-agent-budgeting-before-you-build">The Unit Economics of an AI Agent — Budgeting Before You Build <span class="desc">A per-request budget derived from business arithmetic</span></a>
         </li>
         <li>
-          <a href="https://blog.simukappu.com/ai-driven-development-is-a-diagnostic-for-your-organization">AI-Driven Development Is a Diagnostic for Your Organization</a>
+          <a href="https://blog.simukappu.com/ai-driven-development-is-a-diagnostic-for-your-organization">AI-Driven Development Is a Diagnostic for Your Organization <span class="desc">Where the constraint moves when AI speeds up producing</span></a>
         </li>
       </ul>
     </nav>
