@@ -204,6 +204,26 @@
       letter-spacing: 0;
     }
 
+    .writing .personal {
+      margin-top: 1.5rem;
+      padding-top: 1.25rem;
+      border-top: 1px solid #21262d;
+    }
+
+    .name-note {
+      margin-top: 1.5rem;
+      padding-top: 1.25rem;
+      border-top: 1px solid #21262d;
+      text-align: left;
+      color: #8b949e;
+      font-size: 0.75rem;
+      line-height: 1.6;
+    }
+
+    .name-note em {
+      font-style: italic;
+    }
+
     a:focus-visible {
       outline: 2px solid #58a6ff;
       outline-offset: 3px;
@@ -245,8 +265,8 @@
         </a>
       </div>
     </div>
-    <nav class="writing" aria-labelledby="writing-heading">
-      <h2 id="writing-heading">Selected writing</h2>
+    <nav class="writing" aria-label="Selected writing">
+      <h2>Selected writing from production</h2>
       <ul>
         <li>
           <a href="https://blog.simukappu.com/4-lessons-from-dissecting-production-systems-at-scale-architecture-dojo-2025">4 Lessons from Dissecting Production Systems at Scale — Architecture Dojo 2025 <span class="desc">Constraints, evolvability, and reconciliation in real systems</span></a>
@@ -270,7 +290,18 @@
           <a href="https://blog.simukappu.com/ai-driven-development-is-a-diagnostic-for-your-organization">AI-Driven Development Is a Diagnostic for Your Organization <span class="desc">Where the constraint moves when AI speeds up producing</span></a>
         </li>
       </ul>
+      <div class="personal">
+        <h2>Selected writing from home</h2>
+        <ul>
+          <li>
+            <a href="https://blog.simukappu.com/sent-accepted-reached-automating-a-home-theater-that-is-also-my-office">Sent, Accepted, Reached: Automating a Home Theater That Is Also My Office <span class="desc">My home theater doubles as my office, and now it checks its own work</span></a>
+          </li>
+        </ul>
+      </div>
     </nav>
+    <footer class="name-note">
+      <p><em>simukappu</em> comes from Shimukappu, a village in Hokkaido that our family's train trips passed through when I was a kid. It started as my pen name in middle school and has stuck ever since. The backronym came later: <em>Simultaneous Coupling</em>, for a career spent connecting things that run at the same time.</p>
+    </footer>
   </div>
 </body>
 </html>
