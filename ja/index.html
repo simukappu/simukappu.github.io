@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>山﨑 翔太（Shota Yamazaki）</title>
+  <meta name="description" content="山﨑 翔太（Shota Yamazaki / simukappu）。ソリューションアーキテクチャ組織のリーダー、オープンソースの作者・メンテナー。日本の大規模な本番システムの設計とレビューについて、ブログ Build at Scale で英語で書いています。">
+  <meta property="og:title" content="山﨑 翔太（Shota Yamazaki）">
+  <meta property="og:description" content="ソリューションアーキテクチャ組織のリーダー、オープンソースの作者・メンテナー。日本の大規模な本番システムの設計とレビューについて書いています。">
+  <meta property="og:type" content="profile">
+  <meta property="og:url" content="https://simukappu.com/ja/">
+  <meta property="og:locale" content="ja_JP">
+  <meta property="og:image" content="https://simukappu.com/og-image.jpg">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:image" content="https://simukappu.com/og-image.jpg">
+  <link rel="canonical" href="https://simukappu.com/ja/">
+  <link rel="alternate" hreflang="en" href="https://simukappu.com/">
+  <link rel="alternate" hreflang="ja" href="https://simukappu.com/ja/">
+  <link rel="alternate" hreflang="x-default" href="https://simukappu.com/">
+  <meta name="robots" content="index, follow">
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ProfilePage",
+  "url": "https://simukappu.com/ja/",
+  "inLanguage": "ja",
+  "mainEntity": {
+    "@type": "Person",
+    "@id": "https://simukappu.com/#person",
+    "name": "山﨑 翔太",
+    "alternateName": [
+      "Shota Yamazaki",
+      "山崎 翔太",
+      "ヤマザキ ショウタ",
+      "やまざき しょうた",
+      "simukappu"
+    ],
+    "url": "https://simukappu.com/",
+    "image": "https://simukappu.com/og-image.jpg",
+    "sameAs": [
+      "https://blog.simukappu.com",
+      "https://github.com/simukappu",
+      "https://www.linkedin.com/in/shota-yamazaki",
+      "https://speakerdeck.com/simukappu"
+    ]
+  }
+}
+  </script>
+  <link rel="icon" href="/icon.png" type="image/png">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Hiragino Sans', 'Hiragino Kaku Gothic ProN', 'Noto Sans JP', Roboto, sans-serif;
+      background: #0d1117;
+      color: #e6edf3;
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+    }
+
+    .container {
+      text-align: center;
+      padding: 2rem;
+      max-width: 420px;
+      margin: auto;
+    }
+
+    .avatar {
+      width: 96px;
+      height: 96px;
+      border-radius: 50%;
+      margin-bottom: 1.2rem;
+    }
+
+    h1 {
+      font-size: 1.5rem;
+      font-weight: 600;
+      margin-bottom: 0.6rem;
+    }
+
+    .tagline {
+      font-size: 0.95rem;
+      color: #8b949e;
+      line-height: 1.6;
+      max-width: 540px;
+      margin: 0 auto 2rem;
+    }
+
+    .links {
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+      max-width: calc(420px - 4rem);
+      margin: 0 auto;
+    }
+
+    .link-primary {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.6rem;
+      padding: 0.8rem 1.2rem;
+      border: 1px solid #30363d;
+      border-radius: 8px;
+      color: #e6edf3;
+      text-decoration: none;
+      font-size: 0.95rem;
+      transition: border-color 0.2s, background 0.2s;
+    }
+
+    .link-primary:hover {
+      border-color: #58a6ff;
+      background: rgba(88, 166, 255, 0.08);
+    }
+
+    .links-row {
+      display: flex;
+      gap: 0.75rem;
+      justify-content: center;
+    }
+
+    .links-row a {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      padding: 0.8rem 1.5rem;
+      border: 1px solid #30363d;
+      border-radius: 8px;
+      color: #e6edf3;
+      text-decoration: none;
+      font-size: 0.95rem;
+      flex: 1;
+      transition: border-color 0.2s, background 0.2s;
+    }
+
+    .links-row a:hover {
+      border-color: #58a6ff;
+      background: rgba(88, 166, 255, 0.08);
+    }
+
+    .links svg {
+      width: 20px;
+      height: 20px;
+      fill: #8b949e;
+      flex-shrink: 0;
+    }
+
+    .links a:hover svg,
+    .link-primary:hover svg {
+      fill: #e6edf3;
+    }
+
+    .writing {
+      text-align: left;
+      margin-top: 2.25rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid #21262d;
+    }
+
+    .writing h2 {
+      font-size: 0.8125rem;
+      font-weight: 500;
+      color: #8b949e;
+      margin-bottom: 1rem;
+    }
+
+    .writing ul {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 1.1rem;
+    }
+
+    .writing a {
+      display: block;
+      position: relative;
+      padding-left: 0.85rem;
+      color: #e6edf3;
+      text-decoration: none;
+      font-size: 0.9375rem;
+      font-weight: 500;
+      line-height: 1.45;
+      letter-spacing: -0.01em;
+      transition: color 0.2s;
+    }
+
+    .writing a::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0.25em;
+      bottom: 0.25em;
+      width: 2px;
+      border-radius: 1px;
+      background: #30363d;
+      transition: background 0.2s;
+    }
+
+    .writing a:hover {
+      color: #58a6ff;
+    }
+
+    .writing a:hover::before {
+      background: #58a6ff;
+    }
+
+    .writing a .desc {
+      display: block;
+      margin-top: 0.15rem;
+      color: #8b949e;
+      font-size: 0.8125rem;
+      font-weight: 400;
+      letter-spacing: 0;
+    }
+
+    .writing .personal {
+      margin-top: 1.5rem;
+      padding-top: 1.25rem;
+      border-top: 1px solid #21262d;
+    }
+
+    .name-note {
+      margin-top: 1.5rem;
+      padding-top: 1.25rem;
+      border-top: 1px solid #21262d;
+      text-align: left;
+      color: #8b949e;
+      font-size: 0.75rem;
+      line-height: 1.6;
+    }
+
+    .name-note em {
+      font-style: italic;
+    }
+
+    a:focus-visible {
+      outline: 2px solid #58a6ff;
+      outline-offset: 3px;
+      border-radius: 4px;
+    }
+
+    @media (min-width: 600px) {
+      .container {
+        max-width: min(780px, 100vw - 5rem);
+      }
+    }
+  
+    .tagline,
+    .writing a .ja-q,
+    .name-note p {
+      word-break: auto-phrase;
+    }
+
+    .name-note em {
+      white-space: nowrap;
+    }
+
+    .nw,
+    .tagline .nw {
+      white-space: nowrap;
+    }
+
+    .names {
+      font-size: 0.9rem;
+      color: #8b949e;
+      margin: -0.4rem 0 1rem;
+    }
+
+    .writing a .ja-q {
+      display: block;
+    }
+
+    .lang-switch {
+      margin-top: 1.25rem;
+      text-align: left;
+      font-size: 0.75rem;
+    }
+
+    .lang-switch a {
+      color: #8b949e;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <img class="avatar" src="/icon.png" alt="山﨑 翔太">
+    <h1>山﨑 翔太</h1>
+    <p class="names" lang="en">Shota Yamazaki / simukappu</p>
+    <p class="tagline">クラウド業界でソリューションアーキテクト組織を率いるリーダー、オープンソースの作者・メンテナー。東京を拠点に、日本の大規模な本番システムの設計とレビューを、クラウドアーキテクチャ、分散システム、AI の領域で手がけています。技術と同じだけ、人やプロセスにも関心があります。<span class="nw">AWS Summit Japan</span> の「アーキテクチャ道場」でお題の設計と登壇を続けながら、本番システムの設計判断とトレードオフ、そして学んできたことを、ブログ <span class="nw">Build at Scale</span> に英語で書いています。</p>
+    <div class="links">
+      <a class="link-primary" href="https://blog.simukappu.com">
+        <!-- Pen icon (Heroicons) -->
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M21.731 2.269a2.625 2.625 0 0 0-3.712 0l-1.157 1.157 3.712 3.712 1.157-1.157a2.625 2.625 0 0 0 0-3.712ZM19.513 8.199l-3.712-3.712-8.4 8.4a5.25 5.25 0 0 0-1.32 2.214l-.8 2.685a.75.75 0 0 0 .933.933l2.685-.8a5.25 5.25 0 0 0 2.214-1.32l8.4-8.4Z"/><path d="M5.25 5.25a3 3 0 0 0-3 3v10.5a3 3 0 0 0 3 3h10.5a3 3 0 0 0 3-3V13.5a.75.75 0 0 0-1.5 0v5.25a1.5 1.5 0 0 1-1.5 1.5H5.25a1.5 1.5 0 0 1-1.5-1.5V8.25a1.5 1.5 0 0 1 1.5-1.5h5.25a.75.75 0 0 0 0-1.5H5.25Z"/></svg>
+        Build at Scale (Blog)
+      </a>
+      <div class="links-row">
+        <a href="https://www.linkedin.com/in/shota-yamazaki">
+          <!-- LinkedIn -->
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+          LinkedIn
+        </a>
+        <a href="https://github.com/simukappu">
+          <!-- GitHub Mark -->
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+          GitHub
+        </a>
+      </div>
+    </div>
+    <nav class="writing" aria-label="主な記事">
+      <h2>主な記事（英語）</h2>
+      <ul>
+          <li>
+            <a href="https://blog.simukappu.com/4-lessons-from-dissecting-production-systems-at-scale-architecture-dojo-2025"><span class="ja-q">大規模な本番システムを解剖して得た、制約・進化・整合の 4 つの教訓（アーキテクチャ道場 2025）</span> <span class="desc" lang="en">4 Lessons from Dissecting Production Systems at Scale — Architecture Dojo 2025</span></a>
+          </li>
+          <li>
+            <a href="https://blog.simukappu.com/when-the-poc-passed-but-production-didn-t-defining-good-enough-at-national-scale"><span class="ja-q">PoC を通過したシステムが本番の負荷で止まったとき、「十分」の基準をどう育てるか</span> <span class="desc" lang="en">When the PoC Passed but Production Didn't — Defining "Good Enough" at National Scale</span></a>
+          </li>
+          <li>
+            <a href="https://blog.simukappu.com/three-responses-to-ai-s-probabilistic-core-architecture-dojo-2026"><span class="ja-q">確率的に振る舞う AI を中心に置いたシステムを、どう設計するか（アーキテクチャ道場 2026）</span> <span class="desc" lang="en">Three Responses to AI's Probabilistic Core — Architecture Dojo 2026</span></a>
+          </li>
+          <li>
+            <a href="https://blog.simukappu.com/scaling-peak-traffic-from-planned-offloads-to-unpredictable-bursts"><span class="ja-q">負荷試験では見えない「0 から N への到達」に、どう備えるか</span> <span class="desc" lang="en">Scaling Peak Traffic: From Planned Offloads to Unpredictable Bursts</span></a>
+          </li>
+          <li>
+            <a href="https://blog.simukappu.com/resilience-beyond-multi-az-bulkheads-and-shock-absorbers-architecture-dojo-2024"><span class="ja-q">マルチ AZ の先の耐障害性：バルクヘッドと緩衝機構（アーキテクチャ道場 2024）</span> <span class="desc" lang="en">Resilience Beyond Multi-AZ: Bulkheads and Shock Absorbers — Architecture Dojo 2024</span></a>
+          </li>
+          <li>
+            <a href="https://blog.simukappu.com/the-unit-economics-of-an-ai-agent-budgeting-before-you-build"><span class="ja-q">AI エージェントの 1 リクエストあたりの予算を、事業の数字からどう導くか</span> <span class="desc" lang="en">The Unit Economics of an AI Agent — Budgeting Before You Build</span></a>
+          </li>
+          <li>
+            <a href="https://blog.simukappu.com/ai-driven-development-is-a-diagnostic-for-your-organization"><span class="ja-q">AI 駆動開発で作るのが速くなったとき、制約は組織のどこへ移るのか</span> <span class="desc" lang="en">AI-Driven Development Is a Diagnostic for Your Organization</span></a>
+          </li>
+      </ul>
+      <div class="personal">
+        <h2>家から</h2>
+        <ul>
+          <li>
+            <a href="https://blog.simukappu.com/sent-accepted-reached-automating-a-home-theater-that-is-also-my-office"><span class="ja-q">仕事部屋を兼ねたホームシアターを自動化して、「送った・受け付けた・到達した」を分けて<span class="nw">記録した話</span></span> <span class="desc" lang="en">Sent, Accepted, Reached: Automating a Home Theater That Is Also My Office</span></a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <footer class="name-note">
+      <p><em lang="en">simukappu</em> は北海道の占冠村（しむかっぷ）から来ています。子どもの頃、家族との北海道旅行で乗った列車がこの村を<span class="nw">通っていました。</span>中学生のときに筆名として使い始めて、それ以来ずっと使っています。仕事の専門領域にちなんだ <em lang="en">Simultaneous Coupling</em>（同時に動くものをつなぐ）という意味は、後から付けたものです。</p>
+      <p class="lang-switch"><a href="/" hreflang="en" lang="en">English</a></p>
+    </footer>
+  </div>
+</body>
+</html>

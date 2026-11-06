@@ -13,13 +13,18 @@
   <meta name="twitter:card" content="summary">
   <meta name="twitter:image" content="https://simukappu.com/og-image.jpg">
   <link rel="canonical" href="https://simukappu.com">
+  <link rel="alternate" hreflang="en" href="https://simukappu.com/">
+  <link rel="alternate" hreflang="ja" href="https://simukappu.com/ja/">
+  <link rel="alternate" hreflang="x-default" href="https://simukappu.com/">
   <link rel="alternate" type="application/rss+xml" title="Build at Scale RSS" href="https://blog.simukappu.com/rss.xml">
   <meta name="robots" content="index, follow">
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "Person",
+    "@id": "https://simukappu.com/#person",
     "name": "Shota Yamazaki",
+    "alternateName": ["山﨑 翔太", "山崎 翔太", "ヤマザキ ショウタ", "やまざき しょうた", "simukappu"],
     "url": "https://simukappu.com",
     "image": "https://simukappu.com/og-image.jpg",
     "sameAs": [
@@ -224,6 +229,15 @@
       font-style: italic;
     }
 
+    .lang-switch {
+      margin-top: 1.25rem;
+      font-size: 0.75rem;
+    }
+
+    .lang-switch a {
+      color: #8b949e;
+    }
+
     a:focus-visible {
       outline: 2px solid #58a6ff;
       outline-offset: 3px;
@@ -232,7 +246,7 @@
 
     @media (min-width: 600px) {
       .container {
-        max-width: min(760px, 100vw - 5rem);
+        max-width: min(780px, 100vw - 5rem);
       }
     }
   </style>
@@ -301,6 +315,7 @@
     </nav>
     <footer class="name-note">
       <p><em>simukappu</em> comes from Shimukappu, a village in Hokkaido that our family's train trips passed through when I was a kid. It started as my pen name in middle school and has stuck ever since. The backronym came later: <em>Simultaneous Coupling</em>, for a career spent connecting things that run at the same time.</p>
+      <p class="lang-switch"><a href="/ja/" hreflang="ja" lang="ja">日本語</a></p>
     </footer>
   </div>
 </body>
