@@ -236,6 +236,27 @@
       font-style: italic;
     }
 
+    .lang-anchor {
+      position: relative;
+      max-width: 540px;
+      height: 0;
+      margin: 0 auto;
+    }
+
+    .lang-top {
+      position: absolute;
+      top: 0;
+      right: 0;
+      font-size: 0.75rem;
+      color: #8b949e;
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+
+    .lang-top:hover {
+      color: #58a6ff;
+    }
+
     a:focus-visible {
       outline: 2px solid #58a6ff;
       outline-offset: 3px;
@@ -273,19 +294,11 @@
       display: block;
     }
 
-    .lang-switch {
-      margin-top: 1.25rem;
-      text-align: left;
-      font-size: 0.75rem;
-    }
-
-    .lang-switch a {
-      color: #8b949e;
-    }
   </style>
 </head>
 <body>
   <div class="container">
+    <div class="lang-anchor"><a class="lang-top" href="/" hreflang="en" lang="en">English</a></div>
     <img class="avatar" src="/icon.png" alt="山﨑 翔太">
     <h1>山﨑 翔太</h1>
     <p class="names" lang="en">Shota Yamazaki / simukappu</p>
@@ -345,7 +358,6 @@
     </nav>
     <footer class="name-note">
       <p><em lang="en">simukappu</em> は北海道の占冠村（しむかっぷ）から来ています。子どもの頃、家族との北海道旅行で乗った列車がこの村を<span class="nw">通っていました。</span>中学生のときに筆名として使い始めて、それ以来ずっと使っています。仕事の専門領域にちなんだ <em lang="en">Simultaneous Coupling</em>（同時に動くものをつなぐ）という意味は、後から付けたものです。</p>
-      <p class="lang-switch"><a href="/" hreflang="en" lang="en">English</a></p>
     </footer>
   </div>
 </body>

@@ -229,13 +229,25 @@
       font-style: italic;
     }
 
-    .lang-switch {
-      margin-top: 1.25rem;
-      font-size: 0.75rem;
+    .lang-anchor {
+      position: relative;
+      max-width: 540px;
+      height: 0;
+      margin: 0 auto;
     }
 
-    .lang-switch a {
+    .lang-top {
+      position: absolute;
+      top: 0;
+      right: 0;
+      font-size: 0.75rem;
       color: #8b949e;
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+
+    .lang-top:hover {
+      color: #58a6ff;
     }
 
     a:focus-visible {
@@ -253,6 +265,7 @@
 </head>
 <body>
   <div class="container">
+    <div class="lang-anchor"><a class="lang-top" href="/ja/" hreflang="ja" lang="ja">日本語</a></div>
     <img
       class="avatar"
       src="/icon.png"
@@ -315,7 +328,6 @@
     </nav>
     <footer class="name-note">
       <p><em>simukappu</em> comes from Shimukappu, a village in Hokkaido that our family's train trips passed through when I was a kid. It started as my pen name in middle school and has stuck ever since. The backronym came later: <em>Simultaneous Coupling</em>, for a career spent connecting things that run at the same time.</p>
-      <p class="lang-switch"><a href="/ja/" hreflang="ja" lang="ja">日本語</a></p>
     </footer>
   </div>
 </body>
